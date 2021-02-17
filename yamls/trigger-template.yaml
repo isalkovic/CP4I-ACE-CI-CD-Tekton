@@ -1,0 +1,24 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerTemplate
+metadata:
+  name: acedemo-pipeline-trigger
+spec:
+  resourcetemplates:
+  - apiVersion: tekton.dev/v1beta1
+    kind: PipelineRun
+    metadata:
+      generateName: acedemo-pipeline-run-
+      namespace: ace
+      labels:
+        tekton.dev/pipeline: acedemo-pipeline
+    spec:
+      pipelineRef:
+        name: acedemo-pipeline
+      resources:
+        - name: git-repo
+          resourceRef:
+            name: acedemo-git
+        - name: image
+          resourceRef:
+            name: acedemo-image
+      serviceAccountName: pipeline

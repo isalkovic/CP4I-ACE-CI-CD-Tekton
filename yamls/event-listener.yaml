@@ -1,0 +1,10 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: EventListener
+metadata:
+  name: acedemo-listener
+spec:
+  serviceAccountName: pipeline
+  triggers:
+  - name: acedemo-pipeline-trigger
+    template:
+      name: acedemo-pipeline-trigger

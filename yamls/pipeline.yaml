@@ -1,0 +1,33 @@
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: acedemo-pipeline
+spec:
+  resources:
+  - name: git-repo
+    type: git
+  - name: image
+    type: image
+  tasks:
+  - name: build-image
+    taskRef:
+      name: acedemo-build-task
+    resources:
+      inputs:
+      - name: source
+        resource: git-repo
+      outputs:
+      - name: image
+        resource: image
+    params:
+    - name: TLSVERIFY
+      value: "false"
+  - name: deploy-image
+    taskRef:
+      name: acedemo-deploy-task
+    runAfter:
+      - build-image
+    resources:
+      inputs:
+      - name: image
+        resource: image

@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    eventlistener: acedemo-listener
+  name: acedemo-webhook
+spec:
+  port:
+    targetPort: http-listener
+  to:
+    kind: Service
+    name: el-acedemo-listener
