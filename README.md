@@ -313,7 +313,13 @@ It is sufficient for running the pipelines in cases similar to the one described
 - https://github.com/wtistang/tekton-lab
 - https://www.ibm.com/cloud/garage/dte/tutorial/cloud-native-use-case-using-tekton-pipelines-cicd-microservices
 
+&nbsp;
 
+<a name="Ivo-komentari"></a>
+
+## Ivo komentari
+
+- BUILD FAILS!!! - could not read Username for 'https://github.com' :: treba promijeniti resource za github tako da umjesto https://gitbub.com počinje sa git@github.com (ovo je zbog nekih promjena koje su se u međuvremenu dogodile na Githubu )
 
 
 
