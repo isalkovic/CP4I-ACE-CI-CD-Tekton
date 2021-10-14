@@ -16,7 +16,7 @@ spec:
         kind: IntegrationServer
         metadata:
           name: ace-demo2
-          namespace: ace
+          namespace: ivo-ace-test
         spec:
           pod:
            containers:
@@ -34,5 +34,5 @@ spec:
           service:
             endpointType: http
           useCommonServices: true
-          version: 11.0.0
+          version: 12.0.0
         EOF

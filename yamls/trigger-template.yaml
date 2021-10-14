@@ -8,7 +8,7 @@ spec:
     kind: PipelineRun
     metadata:
       generateName: acedemo-pipeline-run-
-      namespace: ace
+      namespace: ivo-ace-test
       labels:
         tekton.dev/pipeline: acedemo-pipeline
     spec:
