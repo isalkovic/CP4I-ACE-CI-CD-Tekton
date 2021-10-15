@@ -319,9 +319,6 @@ It is sufficient for running the pipelines in cases similar to the one described
 
 ## Ivo komentari
 
-- BUILD FAILS!!! - could not read Username for 'https://github.com' :: treba promijeniti resource za github tako da umjesto https://gitbub.com počinje sa git@github.com (ovo je zbog nekih promjena koje su se u međuvremenu dogodile na Githubu )
-- BUILD FAILS!!! - Could not read from remote repository.\n\nPlease make sure you have the correct access rights\nand the repository exists.
-
 
 
 
